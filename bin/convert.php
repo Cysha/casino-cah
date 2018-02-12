@@ -11,7 +11,7 @@ $whiteCards = collect($data->get('whiteCards'));
 $decks = $data->get('order');
 
 collect($decks)->each(function ($deckName) use ($whiteCards, $blackCards, $data) {
-    $saveLocation = __DIR__ . '/../src/Providers/' . $deckName . '.php';
+    $saveLocation = __DIR__ . '/../src/Providers/CAH' . $deckName . 'CardProvider.php';
     $templatePath = __DIR__ . '/template/CardTemplate.php';
     $deck         = collect($data->get($deckName));
     $template     = str_replace([
